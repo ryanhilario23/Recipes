@@ -1,0 +1,8 @@
+'Invalid email/password. Please try again','login'
+'Please insert email and password','login'
+
+'Name must be at least 3 characters long','register'
+"Password must be at least 8 characters long",'register'
+"Invalid email address!",'register'
+"Email is required.",'register'
+'Passwords does not match','register'

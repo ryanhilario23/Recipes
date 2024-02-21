@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+</head>
+
+<body>
+    <header>
+        <a class="d-flex corner" href="/logout">Log out</a>
+        <h1 class='d-flex'>Welcome {{user.first_name}} {{user.last_name}}! </h1>
+    </header>
+    <main>
+        <div>
+            <p>All posted recipes</p>
+            <a href="">+ Create</a>
+            <a href="">Logout</a>
+        </div>
+        <div>
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Dish Name </th>
+                        <th scope="col">Under 30 mins</th>
+                        <th scope="col">Post by</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td scope="row">R1C1</td>
+                        <td>R1C2</td>
+                        <td>R1C3</td>
+                        <td>R1C3</td>
+                    </tr>
+                    <tr class="">
+                        <td scope="row">Item</td>
+                        <td>Item</td>
+                        <td>Item</td>
+                        <td>Item</td>
+                    </tr>
+                    <tr class="">
+                        <td scope="row">Item</td>
+                        <td>Item</td>
+                        <td>Item</td>
+                        <td>Item</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</body>
+
+</html>

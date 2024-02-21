@@ -1,0 +1,30 @@
+
+pipenv install flask
+pipenv install flask pymySQL
+pipenv install flash
+pipenv install flask-bcrypt
+
+pipenv install flask pymySQL flash flask-bcrypt
+
+pipenv shell
+pipenv python ./server.py
+
+Things to update:
+-Models:
+    -update models.py name
+    -update class name
+    -update database in line 6
+    -change the table in the query in line 13
+    -code the following code before the class
+        - from flask import flash
+        - import re
+        - EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
+        - PASSWOR_REGEX = re.compile(r'a-zA-Z0-9.+_-')
+
+-Controller:
+    -import the following code
+        -from flask import render-template, redirect, request, session
+        -from flask import flash
+        -from flask_bcrypt import Bcrypt
+        -bcrypt = bcrypt(app)
+    -check/change model.py and class import from line 3

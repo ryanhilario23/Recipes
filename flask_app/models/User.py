@@ -8,7 +8,7 @@ PASSWOR_REGEX = re.compile(r'a-zA-Z0-9.+_-')
 # This is where our queries are made for MYSQL
 
 class User:
-    DB = 'prloginnregi_schema'
+    DB = 'recipes_schema'
     def __init__(self,data):
         self.id = data['user_id'],
         self.first_name = data['first_name'],

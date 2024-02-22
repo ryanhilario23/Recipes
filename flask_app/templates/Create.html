@@ -7,29 +7,31 @@
 </head>
 <body>
     <header>
-    <h1>Edit Recipe!</h1>
-    <a href="">back to recipes</a>
-    <a href="">Login</a>
+    <h1>Create Recipe!</h1>
+    <a href="/dashboard">back to recipes</a>
+    <a href="/logout">Logout</a>
 </header>
 <main>
-    <form action="">
+    <form action="/create_dish/push" method="post">
         <div>
-        <label for="">Dish Name:</label>
-        <input type="text"><br><br>
-        <label for="">Descrption:</label>
-        <textarea name = >asd</textarea><br><br>
-        <label for="">instructions</label>
-        <textarea name = >asd</textarea><br><br>
+        <label for="dish_name">Dish Name:</label>
+        <input type="text" name="dish_name"><br><br>
+        <label for="descrption">Descrption:</label>
+        <textarea type="text" name = 'dish_desc'>asd</textarea><br><br>
+        <label for="instructions">instructions</label>
+        <textarea name = 'dish_instrust'>asd</textarea><br><br>
         </div>
         <div>
             <p>Date cooked/Made:</p>
-            <input type="date">
+            <input name ='date' type="date">
             <p>Under 30 mins?</p>
-            <input type="radio" name="Yes" id="">
-            <label for="">yes</label>
-            <input type="radio" name="Yes" id="">
-            <label for="">no</label>
+            <input type="radio" name="cook_time" id="">
+            <label  name="cook_time" value ='yes'>yes</label>
+            <input type="radio" name="cook_time" id="">
+            <label  name="cook_time" value ='no'>no</label>
         </div>
+        <input type="hidden" value="{{session['user_id']}}" name="user_id">
+        <input type='submit' value="Create">
     </form>
 </main>
 </body>

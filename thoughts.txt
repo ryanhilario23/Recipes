@@ -1,2 +1,12 @@
 so for the user recipes
 only one user must have access to that recipe to make edit and changes?
+
+I have one for users
+I need to make one for the dishes
+Do I need to make a model for users_to_recipes?
+    Maybe use session to have users id and recipes id
+        We would have to pop recipes id if they cancel or submit the dish
+
+Future Ryan:
+Recreate the tables for two tables
+    make sure the session user_id

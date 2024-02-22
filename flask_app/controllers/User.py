@@ -1,6 +1,7 @@
 from flask_app import app
 from flask import render_template, redirect, request, session
 from flask_app.models.User import User
+from flask_app.controllers.recipes import Recipe
 from flask import flash
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
@@ -14,10 +15,6 @@ def start_page():
 
 @app.route('/regi_user', methods=['POST'])
 def register_user():
-
-    if request.form['password'] =='':
-        flash('Please fill out form','register')
-        return redirect('/')
     
     if not User.validate_regi_user(request.form):
         return redirect('/')
@@ -62,7 +59,9 @@ def logged_in_user():
     data= {'user_id':session['user_id']}
     one_user = User.logged_in_user(data)
     print(one_user)
-    return render_template('dashboard.html', user = one_user)
+    all_dishes = Recipe.display_dishes()
+    print(all_dishes)
+    return render_template('dashboard.html', dishes = all_dishes,user = one_user)
 
 @app.route('/logout')
 def logout():

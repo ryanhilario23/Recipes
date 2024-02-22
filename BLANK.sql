@@ -6,6 +6,8 @@
 --   name         VARCHAR(500) NULL    ,
 --   description  VARCHAR(500) NULL    ,
 --   instructions VARCHAR(500) NULL    ,
+--   date         DATE         NULL    ,
+--   cook_time    VARCHAR(25)      NULL    ,
 --   PRIMARY KEY (recipe_id)
 -- );
 
@@ -35,8 +37,8 @@
 --     FOREIGN KEY (recipe_id)
 --     REFERENCES recipes (recipe_id);
 
--- SELECT *
--- FROM users;
+SELECT *
+FROM recipes;
 
 -- To save
 -- """
